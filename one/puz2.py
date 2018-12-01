@@ -2,7 +2,6 @@ lines = open("input.txt", 'r')
 line = lines.readline()
 freqs = {}
 freq = 0
-found = False
 while line:
     if line[0] == '+':
         freq += int(line[1:].strip())
