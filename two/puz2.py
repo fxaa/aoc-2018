@@ -39,11 +39,15 @@ for i in range(len(lines)):
     for letter in lines[i]:
         totals[i] += scores[letter]
 
+found = False
 for i in range(len(lines)):
+    if found:
+        break
     for j in range(len(lines)):
         #don't even consider the pair if the score difference is too big to be crossed by one character
         if abs(totals[i] - totals[j]) < 26:
             diff = one_char_diff(lines[i], lines[j])
             if diff[0]:
                 print(lines[i][0:diff[1]] + lines[i][diff[1]+1:])
-                quit()
+                found = True
+                break
