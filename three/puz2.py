@@ -16,8 +16,7 @@ while len(line) > 1:
             else:
                 cuts[(coords[0]+i, coords[1]+j)].append(line[0])
                 overlapped[line[0]] = True
-                for each in cuts[(coords[0]+i, coords[1]+j)]:
-                    overlapped[each] = True
+                overlapped[cuts[(coords[0]+i, coords[1]+j)][-2]] = True
 
     line = file.readline().split(' ')
     
