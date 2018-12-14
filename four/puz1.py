@@ -45,7 +45,6 @@ idx = 0
 for i in range(len(minute_counts)):
 
     if minute_counts[i] > minute:
-        print(i)
         minute = minute_counts[i]
         idx = i
 

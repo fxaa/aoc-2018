@@ -45,7 +45,6 @@ for i in range(len(minute_sleeps)):
             big_minute = i
             big_minute_amount = minute_sleeps[i][guard]
 
-print(sleeper, big_minute, minute_sleeps[big_minute][sleeper])
 sleeper = int(sleeper.split(' ')[1][1:])
 
 print(sleeper*big_minute)
